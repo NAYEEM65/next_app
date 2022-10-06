@@ -66,7 +66,7 @@ const Header = () => {
                     </Link>
                 </h1>
                 {isMenu && (
-                    <div className="flex justify-center flex-col items-center gap-3 w-40 shadow-lg rounded absolute top-10 right-10 bg-slate-200 p-6">
+                    <div className="flex justify-center flex-col items-center gap-3 w-40 shadow-lg rounded absolute top-10 right-10 bg-slate-200 p-6 transition-all duration-100 ease-in-out">
                         <ul className="flex justify-center items-center flex-col gap-3 text-gray-600 cursor-pointer hover:text-gray-700 transition-all duration-100 ease-in-out">
                             <li>
                                 <Link href="/">
