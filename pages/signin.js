@@ -19,7 +19,7 @@ const signin = () => {
                                 className="mt-2 mb-2 rounded w-full"
                                 placeholder="Email"
                             />
-                            <div className="relative w-full">
+                            <div className="relative w-full z-1">
                                 <input
                                     type={`${isvisible ? 'text' : 'password'}`}
                                     placeholder="password"

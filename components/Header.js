@@ -4,7 +4,10 @@ import { MdMenu, MdOutlineClear } from 'react-icons/md';
 
 const Header = () => {
     const [isMenu, setIsMenu] = useState(false);
-    console.log(isMenu);
+    const handleMenuItem = (prevState) => {
+        // setIsMenu(!prevState);
+        console.log(!prevState);
+    };
     return (
         <div className="bg-slate-200 px-4 py-2">
             {/* destop version */}
@@ -12,7 +15,7 @@ const Header = () => {
                 <h1 className="text-3xl text-gray-400 font-semibold">
                     <Link href="/">
                         <a>
-                            <span className="text-orange-600">N</span>ext
+                            <span className="text-blue-600">N</span>ext
                         </a>
                     </Link>
                 </h1>
@@ -61,31 +64,31 @@ const Header = () => {
                 <h1 className="text-3xl text-gray-400 font-semibold">
                     <Link href="/">
                         <a>
-                            <span className="text-orange-600">N</span>ext
+                            <span className="text-blue-600">N</span>ext
                         </a>
                     </Link>
                 </h1>
                 {isMenu && (
-                    <div className="flex justify-center flex-col items-center gap-3 w-40 shadow-lg rounded absolute top-10 right-10 bg-slate-200 p-6 transition-all duration-100 ease-in-out">
+                    <div className="flex justify-center flex-col items-center z-50 gap-3 w-40 shadow-lg rounded absolute top-10 right-10 bg-slate-200 p-6 transition-all duration-100 ease-in-out">
                         <ul className="flex justify-center items-center flex-col gap-3 text-gray-600 cursor-pointer hover:text-gray-700 transition-all duration-100 ease-in-out">
                             <li>
                                 <Link href="/">
-                                    <a>Home</a>
+                                    <a onClick={handleMenuItem}>Home</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/about">
-                                    <a>About</a>
+                                    <a onClick={handleMenuItem}>About</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/service">
-                                    <a>Service</a>
+                                    <a onClick={handleMenuItem}>Service</a>
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/contact">
-                                    <a>Contact</a>
+                                    <a onClick={handleMenuItem}>Contact</a>
                                 </Link>
                             </li>
                         </ul>
